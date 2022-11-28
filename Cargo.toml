@@ -13,7 +13,7 @@ homepage = "https://github.com/rtic-scope/itm-decode"
 
 [dependencies]
 bitmatch = "0.1.1"
-bitvec = "0.22"
+bitvec = "1"
 cortex-m = { version = "0.6", default-features = false }
 thiserror = "1"
 

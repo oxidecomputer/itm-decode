@@ -549,7 +549,7 @@ impl Decoder {
         // To optimize the performance in pull, we must reverse the
         // input bitstream and prepend it. This is a costly operation,
         // but is better done here than elsewhere.
-        let mut bv = BitVec::<LocalBits, _>::from_vec(data.to_vec());
+        let mut bv = BitVec::<_, LocalBits>::from_vec(data.to_vec());
         bv.reverse();
         bv.append(&mut self.incoming);
         self.incoming.append(&mut bv);
